@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>PLANE_Project</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/src/icons/fav_icons" />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/src/icons/fav_icons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/src/icons/fav_icons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/src/icons/fav_icons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/src/icons/fav_icons/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/src/icons/fav_icons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/src/icons/fav_icons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/src/icons/fav_icons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/src/icons/fav_icons/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/src/icons/fav_icons/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/src/icons/fav_icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/src/icons/fav_icons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/src/icons/fav_icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/icons/fav_icons/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="/src/icons/fav_icons/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <!-- MAKING HAMBURGER FOR MOBILE/ADAPTIVE -->
+    <div class="hamburger">
+      <span class="span"></span>
+      <span class="span"></span>
+      <span class="span"></span>
+    </div>
+
+    <section class="first-section">
+      <header class="header">
+        <!-- NAVIGATION MENU -->
+        <div class="container-plane__div">
+          <img
+            class="container-plane__div-logo"
+            src="/src/img/Vector.png"
+            alt="#"
+          />
+          <p class="container-plane__div-name">FT PLANE</p>
+        </div>
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li><a class="navbar-list__link" href="#"> All Flights</a></li>
+            <li><a class="navbar-list__link" href="#">Schedule</a></li>
+            <li><a class="navbar-list__link" href="#">Passangers</a></li>
+            <li><a class="navbar-list__link" href="#">Your Orders</a></li>
+            <button class="navbar-list__button button">Let's Fly</button>
+            <div class="modal hidden">
+              <button class="close_modal">&times;</button>
+              <div class="destination">
+                <p class="destination__text text">
+                  Choose Your<br />
+                  Destination
+                </p>
+                <select class="destination__option option">
+                  <option>United Kingtom</option>
+                  <option>Spain</option>
+                  <option>Italy</option>
+                  <option>Greece</option>
+                  <option>Germany</option>
+                </select>
+              </div>
+              <div class="date">
+                <p class="date__text text">Select Date</p>
+                <input
+                  class="date__option option"
+                  type="date"
+                  name="calendar"
+                />
+              </div>
+              <button class="modal__button button">Let's Go</button>
+            </div>
+          </ul>
+        </nav>
+      </header>
+      <div class="hamburger_active hidden">
+        <ul class="containers">
+          <li class="containers__link">All Flights</li>
+          <li class="containers__link">Schedule</li>
+          <li class="containers__link">Passangers</li>
+          <li class="containers__link">Your Order</li>
+        </ul>
+        <button class="close_link">&times;</button>
+      </div>
+
+      <h1>Travel Around The World</h1>
+    </section>
+    <div class="tab">
+      <ul class="tab__list">
+        <li data-tab="tab-1" class="tablinks">Economy</li>
+        <li data-tab="tab-2" class="tablinks">Business</li>
+        <li data-tab="tab-3" class="tablinks">First</li>
+      </ul>
+    </div>
+    <div class="main">
+      <div id="tab-1" class="main-content">
+        <div class="main-content__section">
+          <div class="section-left">
+            <img
+              class="section-left__icon"
+              src="/src/icons/location-dot-solid.svg"
+              alt=""
+            />
+          </div>
+          <div class="section-right">
+            <div class="section-right__name">Location</div>
+            <div class="section-right__desc">Where Are You Going?</div>
+          </div>
+        </div>
+        <div class="main-content__section">
+          <div class="section-left">
+            <img
+              class="section-left__icon"
+              src="/src/icons/user-plus-solid.svg"
+              alt=""
+            />
+          </div>
+          <div class="section-right">
+            <div class="section-right__name">Travelers</div>
+            <div class="section-right__desc">Add Guess</div>
+          </div>
+        </div>
+        <div class="main-content__section">
+          <div class="section-left">
+            <img
+              class="section-left__icon"
+              src="/src/icons/building-circle-check-solid.svg"
+              alt=""
+            />
+          </div>
+          <div class="section-right">
+            <div class="section-right__name">Check in</div>
+            <div class="section-right__desc">Add Date</div>
+          </div>
+        </div>
+        <div class="main-content__section">
+          <div class="section-left">
+            <img
+              class="section-left__icon"
+              src="/src/icons/building-circle-check-solid.svg"
+              alt=""
+            />
+          </div>
+          <div class="section-right">
+            <div class="section-right__name">Check Out</div>
+            <div class="section-right__desc">Add Date</div>
+          </div>
+        </div>
+        <button class="main-content__button button">
+          Book Now For Economy
+        </button>
+      </div>
+
+      <div id="tab-2" class="main-content hidden">
+        <div class="main-content__section">
+          <div class="section-left">
+            <img
+              class="section-left__icon"
+              src="/src/icons/location-dot-solid.svg"
+              alt=""
+            />
+          </div>
+          <div class="section-right">
+            <div class="section-right__name">Location</div>
+            <div class="section-right__desc">Where Are You Going?</div>
+          </div>
+        </div>
+        <div class="main-content__section">
+          <div class="section-left">
+            <img
+              class="section-left__icon"
+              src="/src/icons/user-plus-solid.svg"
+              alt=""
+            />
+          </div>
+          <div class="section-right">
+            <div class="section-right__name">Travelers</div>
+            <div class="section-right__desc">Add Guess</div>
+          </div>
+        </div>
+        <div class="main-content__section">
+          <div class="section-left">
+            <img
+              class="section-left__icon"
+              src="/src/icons/building-circle-check-solid.svg"
+              alt=""
+            />
+          </div>
+          <div class="section-right">
+            <div class="section-right__name">Check in</div>
+            <div class="section-right__desc">Add Date</div>
+          </div>
+        </div>
+        <div class="main-content__section">
+          <div class="section-left">
+            <img
+              class="section-left__icon"
+              src="/src/icons/building-circle-check-solid.svg"
+              alt=""
+            />
+          </div>
+          <div class="section-right">
+            <div class="section-right__name">Check Out</div>
+            <div class="section-right__desc">Add Date</div>
+          </div>
+        </div>
+        <button class="main-content__button button">
+          Book Now For Business
+        </button>
+      </div>
+      <div id="tab-3" class="main-content hidden">
+        <div class="main-content__section">
+          <div class="section-left">
+            <img
+              class="section-left__icon"
+              src="/src/icons/location-dot-solid.svg"
+              alt=""
+            />
+          </div>
+          <div class="section-right">
+            <div class="section-right__name">Location</div>
+            <div class="section-right__desc">Where Are You Going?</div>
+          </div>
+        </div>
+        <div class="main-content__section">
+          <div class="section-left">
+            <img
+              class="section-left__icon"
+              src="/src/icons/user-plus-solid.svg"
+              alt=""
+            />
+          </div>
+          <div class="section-right">
+            <div class="section-right__name">Travelers</div>
+            <div class="section-right__desc">Add Guess</div>
+          </div>
+        </div>
+        <div class="main-content__section">
+          <div class="section-left">
+            <img
+              class="section-left__icon"
+              src="/src/icons/building-circle-check-solid.svg"
+              alt=""
+            />
+          </div>
+          <div class="section-right">
+            <div class="section-right__name">Check in</div>
+            <div class="section-right__desc">Add Date</div>
+          </div>
+        </div>
+        <div class="main-content__section">
+          <div class="section-left">
+            <img
+              class="section-left__icon"
+              src="/src/icons/building-circle-check-solid.svg"
+              alt=""
+            />
+          </div>
+          <div class="section-right">
+            <div class="section-right__name">Check Out</div>
+            <div class="section-right__desc">Add Date</div>
+          </div>
+        </div>
+        <button class="main-content__button button">
+          Book Now For <br />
+          First
+        </button>
+      </div>
+    </div>
+
+    <!-- SECOND SECTION-->
+    <section class="second-section">
+      <!-- UPPER PART -->
+      <div class="second-upper">
+        <h2 class="second-upper__title title">Our Features</h2>
+        <div class="second-cards">
+          <div class="second-cards__card card">
+            <img class="card-img" src="/src/icons/plane-solid.svg" alt="#" />
+            <p class="card-name">Best Guide</p>
+            <p class="card-desc">
+              Suspendisse ultrices nibh<br />
+              non cursus sagittis. Morbi<br />dictum consequat ex, quis <br />
+              finibus magna.
+            </p>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+          <div class="second-cards__card card">
+            <img class="card-img" src="/src/icons/percent-solid.svg" alt="#" />
+            <p class="card-name">More Discount</p>
+            <p class="card-desc">
+              Suspendisse ultrices nibh<br />
+              non cursus sagittis. Morbi<br />dictum consequat ex, quis <br />
+              finibus magna.
+            </p>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+          <div class="second-cards__card card">
+            <img
+              class="card-img"
+              src="/src/icons/lock-open-solid.svg"
+              alt="#"
+            />
+            <p class="card-name">Private</p>
+            <p class="card-desc">
+              Suspendisse ultrices nibh<br />
+              non cursus sagittis. Morbi<br />dictum consequat ex, quis <br />
+              finibus magna.
+            </p>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+          <div class="second-cards__card card">
+            <img
+              class="card-img"
+              src="/src/icons/headphones-solid (1).svg"
+              alt="#"
+            />
+            <p class="card-name">Online Support</p>
+            <p class="card-desc">
+              Suspendisse ultrices nibh<br />
+              non cursus sagittis. Morbi<br />dictum consequat ex, quis <br />
+              finibus magna.
+            </p>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+      <!-- LOWER PART -->
+      <div class="second-lower">
+        <div class="wrapper-left">
+          <img
+            class="wrapper-left__pic-left"
+            src="/src/img/left_pic.png"
+            alt="#"
+          />
+          <img
+            class="wrapper-left__pic-central"
+            src="/src/img/central_pic.png"
+            alt="#"
+          />
+          <img
+            class="wrapper-left__pic-right"
+            src="/src/img/right_pic.png"
+            alt="#"
+          />
+          <img
+            class="wrapper-left__icon-lwr"
+            src="/src/icons/Airplane Ticket.svg"
+            alt="#"
+          />
+          <img
+            class="wrapper-left__icon-cloud"
+            src="/src/icons/Clouds.svg"
+            alt="#"
+          />
+          <div class="wrapper-left__icon-dest">
+            <img src="/src/icons/dest.svg" alt="#" />
+            <p>New York</p>
+          </div>
+          <div class="wrapper-left__icon-stars">
+            <img src="/src/icons/star.svg" alt="#" />
+            <p class="icon-stars__text">5.0</p>
+          </div>
+        </div>
+
+        <div class="wrapper-right">
+          <p class="hr_line">Let's Fly</p>
+          <p class="wrapper-right__motto">
+            It’s one of the leading online flight booking platforms in the world
+          </p>
+
+          <ul class="wrapper-right__list list">
+            <li class="list-point">
+              Contrary to popular belief, Lorem Ipsum is not simply random text
+            </li>
+            <li class="list-point">
+              Lorem Ipsum is therefore always free from repetition,injected
+              humor baljhd anchhek sydbnah vsgs
+            </li>
+            <li class="list-point">
+              If you are going to use a passage of Lorem Ipsum
+            </li>
+            <li class="list-point">
+              It is a long established fact that a reader will be distracted by
+              the
+            </li>
+          </ul>
+          <button class="wrapper-right__button button">Book Now</button>
+        </div>
+      </div>
+    </section>
+    <section class="third-section">
+      <div class="left-section">
+        <p class="left-section__name">
+          Book Popular Flight <br />
+          Tickets
+        </p>
+        <p class="left-section__desc">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's
+        </p>
+        <img
+          class="left-section__img"
+          src="/src/img/Air Delivery.svg"
+          alt="#"
+        />
+      </div>
+      <div class="rigth-section">
+        <img src="/src/img/ticket.svg" alt="#" />
+      </div>
+    </section>
+    <section class="fourth-section">
+      <div class="upper-part">
+        <h2 class="upper-part__title title">Best Travelers Of This Month</h2>
+        <div class="upper-part__cards">
+          <div class="upper-part__cards cards">
+            <div class="cards__side cards__side_front">
+              <img class="cards__img" src="/src/img/1.svg" alt="#" />
+              <img class="cards__person" src="/src/img/1.1.svg" alt="#" />
+              <p class="cards__name">Raju Mullah</p>
+              <p class="cards__account">@rajumulllah</p>
+            </div>
+            <div class="cards__side cards__side_back">
+              <p class="cards__visited">
+                4 countries<br />
+                this month!
+              </p>
+            </div>
+          </div>
+          <div class="upper-part__cards cards">
+            <div class="cards__side cards__side_front">
+              <img class="cards__img" src="/src/img/2.svg" alt="#" />
+              <img class="cards__person" src="/src/img/2.2.svg" alt="#" />
+              <p class="cards__name">Zaire Vetrovs</p>
+              <p class="cards__account">@zairevetrovs</p>
+            </div>
+            <div class="cards__side cards__side_back">
+              <p class="cards__visited">
+                2 countries<br />
+                this month!
+              </p>
+            </div>
+          </div>
+          <div class="upper-part__cards cards">
+            <div class="cards__side cards__side_front">
+              <img class="cards__img" src="/src/img/3.svg" alt="#" />
+              <img class="cards__person" src="/src/img/3.3.svg" alt="#" />
+              <p class="cards__name">Marcus Dias</p>
+              <p class="cards__account">@marcusdias</p>
+            </div>
+            <div class="cards__side cards__side_back">
+              <p class="cards__visited">
+                6 countries<br />
+                this month!
+              </p>
+            </div>
+          </div>
+          <div class="upper-part__cards cards">
+            <div class="cards__side cards__side_front">
+              <img class="cards__img" src="/src/img/4.svg" alt="#" />
+              <img class="cards__person" src="/src/img/4.4.svg" alt="#" />
+              <p class="cards__name">Davis Schleifer</p>
+              <p class="cards__account">@davisschleifer</p>
+            </div>
+            <div class="cards__side cards__side_back">
+              <p class="cards__visited">
+                3 countries<br />
+                this month!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lower-part">
+        <h3 class="lower-part__subtitle">What’s Our Customer Saying</h3>
+        <h2 class="lower-part__title title">Our Customer Feedback</h2>
+        <div class="lower-part__box box">
+          <img class="lower-part__box box-img" src="/src/img/map.png" alt="#" />
+          <div class="lower-part__box box-opinion">
+            <div class="box-opinion__upper">
+              <img
+                class="opinion-upper__img"
+                src="/src/img/opinion1.svg"
+                alt="#"
+              />
+              <img
+                class="opinion-upper__review"
+                src="/src/img/review1.svg"
+                alt=""
+              />
+            </div>
+            <div class="box-opinion__lwr">
+              <p class="box-opinion__lwr-text">
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour, or randomised words which don
+              </p>
+            </div>
+          </div>
+          <!-- <div class="next">
+            <img
+              class="next__left"
+              src="/icons/circle-arrow-left-solid.svg"
+              alt="#"
+            />
+            <img
+              class="next__right"
+              src="/icons/circle-arrow-right-solid.svg"
+              alt="#"
+            />
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <section class="fifth-section">
+      <h2 class="fifth-section__title title">Make Memories With Us</h2>
+      <div class="fifth-section__cards">
+        <img class="fifth-section__cards card" src="/src/img/5.1.svg" alt="#" />
+        <img class="fifth-section__cards card" src="/src/img/5.2.svg" alt="#" />
+        <img class="fifth-section__cards card" src="/src/img/5.3.svg" alt="#" />
+        <img class="fifth-section__cards card" src="/src/img/5.4.svg" alt="#" />
+      </div>
+    </section>
+    <section class="section-six">
+      <h3 class="section-six__title title">
+        Subscribe Newsletter& <br />
+        get letest news
+      </h3>
+      <div class="section-six__subscribe">
+        <input
+          name="email"
+          type="email"
+          placeholder="Enter your email adress"
+        />
+        <button class="subscribe-button button">Subscribe</button>
+      </div>
+    </section>
+    <section class="section-seven">
+      <div class="container">
+        <div class="container-plane">
+          <div class="container-plane__div">
+            <img
+              class="container-plane__div-logo"
+              src="/src/img/Vector.png"
+              alt="#"
+            />
+            <p class="container-plane__div-name">FT PLANE</p>
+          </div>
+          <p class="container-plane__text">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form
+          </p>
+          <div class="container-plane__icons">
+            <img src="/src/icons/facebook.svg" alt="#" />
+            <img src="/src/icons/linkedin-in.svg" alt="#" />
+            <img src="/src/icons/twitter.svg" alt="#" />
+          </div>
+        </div>
+        <div class="container-adress">
+          <p class="container-plane__name">Adress</p>
+          <a href="#">Integrations</a>
+          <a href="#">Hello</a>
+          <a href="#">Intercom</a>
+          <a href="#">Customer</a>
+        </div>
+        <div class="container-about">
+          <p class="container-plane__name">About</p>
+          <a href="#">Our Blog</a>
+          <a href="#">Customers</a>
+          <a href="#">Our Team</a>
+          <a href="#">Careers</a>
+          <a href="#">Integration</a>
+        </div>
+        <div class="container-support">
+          <p class="container-plane__name">Support</p>
+          <a href="#">Test Zoom</a>
+          <a href="#">Account</a>
+          <a href="#">Support Centre</a>
+          <a href="#">Live Training</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+      <hr class="section-seven__line" />
+      <p class="section-seven__rights">
+        Copyright © FT PLANE 2022 All right reserved
+      </p>
+    </section>
+    <div class="overlay hidden"></div>
+    <script
+      src="https://kit.fontawesome.com/f2d44eea26.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/src/js/script.js"></script>
+  </body>
+</html>
